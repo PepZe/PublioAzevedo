@@ -8,7 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule, MatToolbar } from '@angular/material/toolbar'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatIconModule} from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon'
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   exports: [MatSidenavModule, MatToolbarModule, MatToolbar],
@@ -17,7 +18,8 @@ import {MatIconModule} from '@angular/material/icon'
     CoursesComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, BrowserAnimationsModule, MatSidenavModule, MatToolbarModule, MatSlideToggleModule, MatIconModule
+    BrowserModule, HttpClientModule, BrowserAnimationsModule, MatSidenavModule, MatToolbarModule, MatSlideToggleModule, MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

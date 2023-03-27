@@ -1,16 +1,32 @@
 ﻿<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <div class="example-button-container">
+        <div class="example-sidenav-content">
+            <button type="button" mat-button (click)="drawer.toggle()" mat-mini-fab color="primary"
+                aria-label="Example icon button with a menu icon" class="btn-menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+    </div>
     <span>My App</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+        <mat-icon>favorite</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
+        <mat-icon>share</mat-icon>
     </button>
-  </mat-toolbar>
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p class="sidenav-item">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+                <h1>Dashboard</h1>
+            </button>
+        </p>
+    </mat-drawer>
+</mat-drawer-container>
 
 <p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a
             href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more
